@@ -1,0 +1,15 @@
+---
+
+- hosts: example
+  become: true
+  become_method: sudo
+  tasks:
+       - name: pull from git
+         shell: git pull
+         args:
+           chdir: /CONTENT/kiwu/
+
+       - name: restart apache2
+         service:
+            name: apache2
+            state: restarted
