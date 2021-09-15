@@ -1,6 +1,6 @@
 ---
 
-- hosts: example
+- hosts: production
   become: true
   become_method: sudo
   tasks:
